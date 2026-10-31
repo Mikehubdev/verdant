@@ -641,10 +641,13 @@ body {
 .add-button:hover {
   background-color: #223929;
 }
-
+.flex-before-foot{
+  display: flex;
+  margin-bottom: 2rem;
+}
 .offer{
   background-color:#223929 ;
-  padding:25px 50px 25px 18px ;
+ flex-grow: 1;
   width: fit-content;
   border-radius: 15px;
   
@@ -712,6 +715,7 @@ background-color: #F7E8D5;
 padding: 46.22px 28px 46.22px 28px;
 border-radius: 22px;
 width: fit-content;
+flex-grow: 1;
 }
 .d-plan{
 font-size: 22px;
@@ -784,20 +788,16 @@ width: 250px;
 }
  .v-foot2{
   display: flex; 
-  gap: 2rem;
-  margin-left: 5rem;
-  margin-right:5rem ;
+  gap: 1rem;
+  
 
 } 
   
 .v-foot3{
-border-top: 1px solid #3A5040;
+ border-top: 1px solid #3A5040; 
 padding-top: 1rem;
-display: flex;
-justify-content: space-between;
-margin-left: 5rem;
-  margin-right:5rem ;
-
+ display: flex;
+justify-content: space-between; 
 }
 .foot3-p1{
   color: #8E9C8C;
@@ -808,12 +808,16 @@ margin-left: 5rem;
   .foot{
   display: flex;
   justify-content:space-between;
-  margin-left: 5rem;
-  margin-right:5rem ;
 } 
+.overall-f{
+  width: 900px;
+  margin-inline: auto;
+
+}
 footer{
   background-color: #223929;
   padding-top: 2rem;
+  padding-bottom: 2rem;
   
 
 
