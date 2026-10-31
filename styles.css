@@ -390,24 +390,44 @@ body {
   font-size: 13px;
 }
 .aisels-subheading,
-.how-it-works-subheading {
+.how-it-works-subheading,
+.weekly-picks-subheading {
   color: #4a7c59;
   font-size: 12px;
 }
 .aisels-heading,
-.how-it-works-heading {
+.how-it-works-heading,
+.weekly-picks-heading {
   font-family: "Source Serif 4", serif;
   font-size: 27px;
   font-weight: 400;
 }
 
 .aisels-cards-wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  /* justify-content: space-between; */
   margin-top: 30px;
   flex-wrap: wrap;
   gap: 20px;
 }
+
+@media (max-width: 900px) {
+  .aisels-cards-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .aisels-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 350px) {
+  .aisels-cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
 .aisels-card {
   border: 1px solid #e3decb;
   border-radius: 12px;
@@ -495,10 +515,307 @@ body {
   font-size: 13px;
 }
 
-
-
-@media(max-width: 640px){
-  .how-it-works{
+@media (max-width: 640px) {
+  .how-it-works {
     flex-direction: column;
   }
+}
+
+.weekly-picks {
+  background-color: #faf7ee;
+  padding: 50px 20px;
+}
+.weekly-picks-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.weekly-picks-filters {
+  display: flex;
+  gap: 8px;
+  align-self: flex-end;
+}
+.filter-button {
+  border: 1px solid #e3decb;
+  background-color: white;
+  color: #1f2e24;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+}
+.filter-button:hover {
+  border-color: #2f5d39;
+}
+.filter-button.active {
+  background-color: #223929;
+  border-color: #223929;
+  color: white;
+}
+
+.weekly-picks-cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 30px;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .weekly-picks-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .weekly-picks-cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #e3decb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-card-image {
+  position: relative;
+}
+.product-card-image > img {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.product-card-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #faf7ee;
+  color: #1f2e24;
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 30px;
+}
+
+.product-card-content {
+  padding: 15px 12px;
+}
+.product-card-content > h4 {
+  font-weight: 600;
+  color: #1f2e24;
+  font-size: 13px;
+}
+.product-card-content > p {
+  font-size: 11px;
+  color: #6f6a5c;
+  margin-top: 3px;
+}
+
+.product-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+.product-price {
+  font-weight: 600;
+  color: #1f2e24;
+  font-size: 13px;
+}
+.add-button {
+  height: 28px;
+  width: 28px;
+  border: none;
+  border-radius: 100%;
+  background-color: #2f5d39;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.add-button:hover {
+  background-color: #223929;
+}
+
+.offer{
+  background-color:#223929 ;
+  padding:25px 50px 25px 18px ;
+  width: fit-content;
+  border-radius: 15px;
+  
+}
+.week-offers{
+  background-color:#F2B705;
+  padding: 4px 10px 4px 10px;
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-style: bold;
+  font-size: 10px;
+  letter-spacing: 0.2px;
+  width: fit-content;
+  color: #223929;
+  border-radius: 999px;
+}
+.salad{
+  font-family: "source serif 4";
+  font-weight: 400;
+  font-size: 29px;
+  font-style: "regular";
+  color: #FFFFFF;
+  padding-top: 5px;
+}
+.kale{
+  font-weight: 400;
+  font-family: "DM Sans";
+  font-size: 12.5px;
+  font-style: "regular";
+  color: #B9C4B7;
+  padding-top: 8px;
+
+}
+ .deal{
+ background-color:#FAF7EE ;
+ padding: 2px 10px 2px 10px;
+ border-radius: 999px;
+ text-align: center;
+
+ border: none;
+}
+.deal-text{
+  color:#223929 ;
+  font-size: 13px;
+  font-style: "meduim";
+  font-family: "DM Sans";
+  font-optical-sizing: 13px;
+}
+.grab-time{
+  color: #9DAA9B;
+  font-family: "DM sans";
+  font-weight: 400;
+  font-style: "Regular";
+  font-size: 11px;
+}
+.grab-deal{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-top:1rem;
+}
+.weekend-plan{
+border: 1px solid #EFDCC3;
+background-color: #F7E8D5;
+padding: 46.22px 28px 46.22px 28px;
+border-radius: 22px;
+width: fit-content;
+}
+.d-plan{
+font-size: 22px;
+font-family: "Source Serif 4";
+font-style: "Regular";
+font-weight: 400;
+color: #1F2E24;
+width: 250px;
+}
+.live{
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-size: 12px;
+  font-style: "Regular";
+  color: #6F6A5C;
+}
+.stores{
+  padding: 5px 14px 5px 14px;
+  border-radius: 8px;
+  color: #223929;
+}
+
+
+
+
+
+
+
+.v-foot1{
+  padding-bottom: 8px;
+}
+.v-log{
+  background-color: #FFFFFF;
+  border-radius: 14px;
+  width: 28px;
+  height: 28px;
+}
+.verd-l{
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 20px;
+}
+.foot-logo{
+  display: flex;
+  gap:10px;
+  align-items: center;
+  padding-bottom: 8px;
+}
+.verd-l-para{
+  font-weight: 400;
+  font-size: 12.5px;
+  color:#A9B6A8 ;
+  font-family: "DM Sans";
+  width: 220px;
+  line-height: 15px;
+  
+}
+.v-head{
+ font-size: 10px; 
+ color:#8E9C8C ;
+ font-family: "DM Sans";
+ letter-spacing: 0.4px;
+ padding-bottom: 4px;
+}
+.vf-link{
+  font-weight: 400;
+  color:#E9EBDF ;
+  font-size: 12.5px;
+  padding-bottom: 4px;
+}
+ .v-foot2{
+  display: flex; 
+  gap: 2rem;
+  margin-left: 5rem;
+  margin-right:5rem ;
+
+} 
+  
+.v-foot3{
+border-top: 1px solid #3A5040;
+padding-top: 1rem;
+display: flex;
+justify-content: space-between;
+margin-left: 5rem;
+  margin-right:5rem ;
+
+}
+.foot3-p1{
+  color: #8E9C8C;
+  font-weight: 400;
+  font-size: 11px;
+
+}
+  .foot{
+  display: flex;
+  justify-content:space-between;
+  margin-left: 5rem;
+  margin-right:5rem ;
+} 
+footer{
+  background-color: #223929;
+  padding-top: 2rem;
+  
+
+
+
 }
