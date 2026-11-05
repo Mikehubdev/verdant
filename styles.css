@@ -865,10 +865,11 @@ padding: 1rem;
  .v-foot2{
   display: flex; 
   gap: 1rem;
-  
-
 } 
-  
+ .v-foot2 a{
+  display: block;
+ } 
+ 
 .v-foot3{
  border-top: 1px solid #3A5040; 
 padding-top: 1rem;
